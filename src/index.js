@@ -1,5 +1,6 @@
 import oneCountryTpl from './templates/oneCountry.hbs'
-import someCoutriesTpl from './templates/someCounries.hbs'
+
+import someCountriesTpl from './templates/someCounries.hbs'
 import Notiflix from 'notiflix';
 import './css/styles.css';
 import { fetchCountries } from './fetchCountries.js'
@@ -30,7 +31,7 @@ function renderData(data) {
     }
     
     if (data.length > 2 || data.length >= 10) { 
-        refs.countryList.innerHTML = someCoutriesTpl({ data});
+        refs.countryList.innerHTML = someCountriesTpl({ data});
         return;
     } 
      refs.countryList.innerHTML = oneCountryTpl({data}); 
